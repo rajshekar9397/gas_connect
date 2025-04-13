@@ -14,8 +14,8 @@ const RegisterForm = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const res = await registerUser(form);
-    if (res.message === 'User created successfully') {
-      navigate('/login');
+    if (res.message === 'Registration successful!') {
+      navigate('/');
     } else {
       setError(res.message || 'Something went wrong');
     }

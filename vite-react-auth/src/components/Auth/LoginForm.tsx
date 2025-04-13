@@ -15,8 +15,8 @@ const LoginForm = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const res = await loginUser(form);
-    if (res.message === 'Login successful') {
-      navigate('/dashboard');
+    if (res.message === 'Login successful!') {
+      navigate('/register');
     } else {
       setError(res.message || 'Login failed');
     }

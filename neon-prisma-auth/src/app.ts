@@ -4,11 +4,11 @@ import bodyParser from 'body-parser';
 import authRoutes from './routes/auth'; // Make sure the path is correct
 
 const app = express();
-
+app.use(express.json());
 
 // 👇 Setup CORS properly
 app.use(cors({
-  origin: 'http://localhost:3003',
+  origin: 'http://localhost:3000',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 }));
